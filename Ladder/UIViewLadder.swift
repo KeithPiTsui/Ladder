@@ -28,7 +28,7 @@ extension UIView {
   public static func firstAncestor<V: UIView>(_: V.Type) -> (UIView) -> V? {
     return { view in
       var tv: UIView? = view
-      while tv != nil && (tv is UIWindow) == false {
+      while tv != nil {
         if tv is V { return tv as? V }
         tv = tv?.superview
       }
