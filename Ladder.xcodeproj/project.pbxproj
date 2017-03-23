@@ -10,6 +10,9 @@
 		0EDCFB361E842EB70095F61B /* Ladder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDCFB2C1E842EB60095F61B /* Ladder.framework */; };
 		0EDCFB3B1E842EB70095F61B /* LadderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCFB3A1E842EB70095F61B /* LadderTests.swift */; };
 		0EDCFB3D1E842EB70095F61B /* Ladder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDCFB2F1E842EB60095F61B /* Ladder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EDCFB4A1E842EDC0095F61B /* UIResponderLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCFB471E842EDC0095F61B /* UIResponderLadder.swift */; };
+		0EDCFB4B1E842EDC0095F61B /* UIViewControllerLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCFB481E842EDC0095F61B /* UIViewControllerLadder.swift */; };
+		0EDCFB4C1E842EDC0095F61B /* UIViewLadder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDCFB491E842EDC0095F61B /* UIViewLadder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		0EDCFB351E842EB70095F61B /* LadderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LadderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDCFB3A1E842EB70095F61B /* LadderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderTests.swift; sourceTree = "<group>"; };
 		0EDCFB3C1E842EB70095F61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EDCFB471E842EDC0095F61B /* UIResponderLadder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponderLadder.swift; sourceTree = "<group>"; };
+		0EDCFB481E842EDC0095F61B /* UIViewControllerLadder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerLadder.swift; sourceTree = "<group>"; };
+		0EDCFB491E842EDC0095F61B /* UIViewLadder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLadder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		0EDCFB2E1E842EB60095F61B /* Ladder */ = {
 			isa = PBXGroup;
 			children = (
+				0EDCFB461E842EC50095F61B /* Source */,
 				0EDCFB2F1E842EB60095F61B /* Ladder.h */,
 				0EDCFB301E842EB60095F61B /* Info.plist */,
 			);
@@ -84,6 +91,16 @@
 				0EDCFB3C1E842EB70095F61B /* Info.plist */,
 			);
 			path = LadderTests;
+			sourceTree = "<group>";
+		};
+		0EDCFB461E842EC50095F61B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0EDCFB471E842EDC0095F61B /* UIResponderLadder.swift */,
+				0EDCFB481E842EDC0095F61B /* UIViewControllerLadder.swift */,
+				0EDCFB491E842EDC0095F61B /* UIViewLadder.swift */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +166,7 @@
 					0EDCFB2B1E842EB60095F61B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6T5NK4S24M;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					0EDCFB341E842EB70095F61B = {
@@ -198,6 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDCFB4C1E842EDC0095F61B /* UIViewLadder.swift in Sources */,
+				0EDCFB4B1E842EDC0095F61B /* UIViewControllerLadder.swift in Sources */,
+				0EDCFB4A1E842EDC0095F61B /* UIResponderLadder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +343,7 @@
 		0EDCFB411E842EB70095F61B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6T5NK4S24M;
@@ -334,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Keith.Pi.Tsui.Ladder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +364,7 @@
 		0EDCFB421E842EB70095F61B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6T5NK4S24M;
@@ -360,6 +384,7 @@
 		0EDCFB441E842EB70095F61B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6T5NK4S24M;
 				INFOPLIST_FILE = LadderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +397,7 @@
 		0EDCFB451E842EB70095F61B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6T5NK4S24M;
 				INFOPLIST_FILE = LadderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
