@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-  public static func firstAncestor<VC: UIViewController>(_:VC.Type) -> (UIViewController) -> VC? {
+  public static func firstAncestor<VC>(_:VC.Type) -> (UIViewController) -> VC? {
     return { viewController in
       var tvc: UIViewController? = viewController
       while tvc != nil {
@@ -20,7 +20,7 @@ extension UIViewController {
     }
   }
 
-  public static func firstDescedant<V: UIViewController>(_: V.Type) -> (UIViewController) -> V? {
+  public static func firstDescedant<V>(_: V.Type) -> (UIViewController) -> V? {
     return { viewController in
       var cvcs: [UIViewController] = [viewController]
       while cvcs.isEmpty == false  {

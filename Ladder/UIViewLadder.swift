@@ -25,7 +25,7 @@ extension UIView {
     return UIView.firstAncestor(UICollectionViewCell.self)(self)
   }
 
-  public static func firstAncestor<V: UIView>(_: V.Type) -> (UIView) -> V? {
+  public static func firstAncestor<V>(_: V.Type) -> (UIView) -> V? {
     return { view in
       var tv: UIView? = view
       while tv != nil {
@@ -36,7 +36,7 @@ extension UIView {
     }
   }
 
-  public static func firstDescedant<V: UIView>(_: V.Type) -> (UIView) -> V? {
+  public static func firstDescedant<V>(_: V.Type) -> (UIView) -> V? {
     return { view in
       var svs: [UIView] = [view]
       while svs.isEmpty == false  {
